@@ -1,0 +1,16 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www.radziejewski.eu(.*) [NC]
+RewriteRule ^(.*)$ http://radziejewski.eu/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+Redirect 301 /pixel-facebooka-najlepsze-darmowe-wtyczki-do-wordpressa/ /wordpress.html
+Redirect 301 /wordpress-jak-wlaczyc-multisite/ /wordpress.html
+Redirect 301 /wordpress-reczna-aktualizacja/ /wordpress.html
+Redirect 301 /category/wordpress/ /wordpress.html
+Redirect 301 /opieka-wordpress/ /index.html
